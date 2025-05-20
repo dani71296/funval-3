@@ -1,12 +1,16 @@
-body{
-    background-color: aquamarine;
+header{
+    display:flex;/* dado que header en html es padre de 
+        h2 y ul el comando flex hace que se coloquen lado a lado
+        dependiendo la jerarquia*/
+    align-items: center;
+    justify-content: space-between;/* coloca un espacio entre los elementos*/
+    background-color: rgb(75, 64, 64);
+    color: beige;
+    
 }
-#cabecera{
-    color: blueviolet;
-}
-.contenedor-principal{
-    color: blue;
-}
-.subtitulos{
-    color: red;
+ul{
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    list-style: none;
 }
