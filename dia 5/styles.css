@@ -1,0 +1,34 @@
+/* z-index:.. */ /*usa un valor aleatorio pero es para asignar una orden de prioridad */
+/* cuando se usa top,left,bottom,right (despues de un position:relative) el porden de prioridad
+es top manda a botom y left manda a right*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.contenedor{
+    border: 2px solid black;
+}
+caja{
+    position: relative;
+    /* relative se mueve de acuerdo a su padre y nada ocupa su lugar
+    automaticamente a menos que se haga  manual */
+}
+.caja-1{
+    position: absolute;
+    left: 50px;
+    /*  position absolute se mueve y otro ocupa su lugar
+    ademas de moverse en relacion al siguiente mas cercano que tenga position relative, absolute o 
+    fixed o sticky 
+    de otra manera se movera en relacion al boddy */
+    position: fixed; /* se queda en un lugar en tomo momento */
+    position: sticky;/* El elemento se comporta como relative hasta que 
+    se alcanza un cierto punto de scroll,
+     y luego se queda "pegado" (sticky).
+    Necesita un contenedor con altura suficiente para que el efecto funcione.
+    Se posiciona relativo a su contenedor padre más cercano con scroll. */
+}
