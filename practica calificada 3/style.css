@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    max-width: 800px;
+    width: 100%;
+}
+header{
+    background-color: rgb(94, 72, 72);
+    color: white;
+    font-size: 20px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 50px;
+    background-color: rgb(18, 192, 56);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;/*para que se mantenga a la izq*/
+    align-items: center;
+    gap: 30px; /* esta es la separacion entre items*/
+    padding-left: 20px;
+}
+.hero{
+    background-color: rgb(13, 178, 228);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 220px;/*espacio entre texto e imagen*/
+    min-height: 300px;
+}
+.parrafo{
+    max-width: 370px;
+}
+.hero h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#texto{
+    padding-left: 20px;
+    font-size: 20px;
+}
+button {
+  background-color: green;    
+  color: white;               
+  border: none;               
+  border-radius: 8px;         
+  padding: 10px 20px;         /* espacio interior */
+  font-size: 16px;            
+  cursor: pointer;            /* cambia el cursor al pasar el mouse */
+  text-align: center;         /* asegura texto centrado */
+  margin-left: 20px;        /* empuja el botón hacia la derecha */
+}
+
+.imagen1{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+}
+.imagen1 img {
+  width: 100%; /* hace que la imagen se ajuste a los 200px de su contenedor */
+  display: block;
+}
+.personajes{
+    background-color: rgb(243, 238, 233);
+    height: auto;
+    padding-bottom: 20px;
+}
+.personajes h2{
+    text-align: left;
+    margin-left: 20px;
+       
+}
+.lista{
+    background-color: aliceblue;
+    margin: 20px 20px 20px 20px;
+}
+.lista ul {
+    text-align: left;
+    margin-left: 50px;
+    color: black;
+}
+.lista p{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18;
+}
+footer{
+    background-color: black;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
