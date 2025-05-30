@@ -9,7 +9,6 @@
 <body>
     <header class="bg-blue-900 md:bg-gradient-main p-4 flex justify-between items-center ">
         <div class="flex items-center gap-2 ">
-            <!-- <img src="./logo2.webp" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 0 10px rgba(10, 20, 30, 0.6); object-fit: cover;"> -->
              <img src="./logo2.webp" alt="Logo" class="w-[50px] h-[50px] rounded-full shadow-lg shadow-blue-950/40 object-cover">
             <h1 class="text-xl md:text-2xl font-bold text-light">Daniel.dev</h1>
         </div>
@@ -23,13 +22,73 @@
         <nav class="hidden md:flex gap-6 text-light items-center">
             <a href="./index.html" class="hover:text-highlight">Inicio</a>
             <a href="#habilidades" class="hover:text-highlight">Habilidades</a>
-            <a href="#proyectos" class="hover:text-highlight">Proyectos</a>
-            <a href="#contacto" class="hover:text-highlight">Contacto</a>
-            <a href="#contacto" class="bg-highlight text-dark px-4 py-2 rounded-lg">Contáctame</a>
-        </nav>
-    </header>
-    <section class="hero"></section>
-    
-    
+            <a href="#mensaje" class="hover:text-highlight">Mensaje</a>
+            <!-- <a href="#contacto" class="hover:text-highlight">Contacto</a> -->
+            <a href="#cv" class="bg-highlight text-dark px-4 py-2 rounded-lg">Curriculum</a>
+        </nav> 
+    </header>  
+    <section class="relative min-h-[50vh] bg-dark text-light">
+        <div class="absolute inset-0 -z-10">
+            <img src="./gifondo.gif" alt="Fondo animado" class="w-full h-full object-cover opacity-60" />
+        </div>
+
+        <div class="relative flex flex-col items-center justify-center min-h-[50vh] p-6 text-white">
+            <img src="./perfil.jpeg" alt="Foto Daniel" class="w-32 h-32 rounded-full shadow-lg mb-4 object-cover ">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-2 text-center">Daniel Tudela</h2>
+            <p class="text-lg md:text-2xl mb-6 text-center max-w-xl">Full Stack Developer | JavaScript, React, Node.js</p>
+            <a href="../index.html" class="bg-highlight text-dark px-6 py-3 rounded-lg font-semibold hover:bg-neonGreen transform transition-transform duration-300 hover:scale-120">Ver Proyectos</a>
+        </div>
+    </section>
+    <section class="bg-deepBlue text-light py-12 px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">¿Quién soy?</h3>
+        <div class="max-w-3xl mx-auto space-y-4 mb-10">
+            <p>
+            ¡Hola! Soy Daniel Tudela, un desarrollador Full Stack apasionado por crear soluciones digitales que impactan.
+            Me especializo en tecnologías como JavaScript, React, Node.js y MongoDB.
+            </p>
+            <p>
+            Disfruto aprender constantemente, colaborar en equipo y enfrentar nuevos desafíos. Creo en escribir código limpio
+            y accesible que aporte valor real a los usuarios.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+            <div class="bg-dark p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <h4 class="text-xl font-semibold mb-2">📚 Formación</h4>
+                <p>Full Stack en Funval</p>
+            </div>
+        
+        
+            <div class="bg-dark p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <h4 class="text-xl font-semibold mb-2">🗣️ Idiomas</h4>
+                <p>Español, Inglés B2</p>
+            </div>
+        </div>
+    </section>
+    <section id="habilidades" class="bg-blue-100 pb-8">
+        <h2 class="text-center mb-4 text-3xl font-bold">Habilidades</h2>
+        <div class="w-full grid grid-cols-2 md:grid-cols-5 gap-5 px-8 place-items-center">
+            <img src="./images/selogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/solidworklogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/Pythonlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/JavaScriptlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/inventorlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/htmlog.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/excelogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/csslog.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/arduiniolog.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+            <img src="./images/3dlogos2.jpg0 " alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
+        </div>
+    </section>
+    <section id="mensaje" class="px-6 bg-cyan-50">
+        <h2 class="text-center mb-6 text-2xl font-bold">Dejame un mensaje</h2>
+        <div class="flex items-center flex-col justify-center max-w-3xl w-full pb-8 mx-auto">
+            <form action="" class="flex flex-col border border-gray-400 p-4 rounded-lg pb-8">
+                <input placeholder="Nombre" type="text" name="nombre" class="w-full mb-4 border border-gray-400 rounded-lg">
+                <input placeholder="Correo" type="email" name="correo" class="w-full mb-4 border border-gray-400 rounded-lg">
+                <textarea placeholder="Escribe aqui" name="mensaje" id="" class="max-w mb-4 border border-gray-400 px-3 py-2 rounded-lg"></textarea>
+                <button class="w-full border border-gray-400 px-3 py-2 bg-green-300 hover:bg-green-500 rounded-full">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
