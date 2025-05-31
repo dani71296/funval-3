@@ -7,24 +7,34 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-blue-900 md:bg-gradient-main p-4 flex justify-between items-center ">
-        <div class="flex items-center gap-2 ">
-             <img src="./logo2.webp" alt="Logo" class="w-[50px] h-[50px] rounded-full shadow-lg shadow-blue-950/40 object-cover">
-            <h1 class="text-xl md:text-2xl font-bold text-light">Daniel.dev</h1>
+    <header class="bg-blue-900 md:bg-gradient-main p-4 flex flex-col md:flex-row md:justify-between md:items-center">
+        <div class="flex justify-between items-center w-full md:w-auto">
+            <div class="flex items-center gap-2 ">
+                <img src="./logo2.webp" alt="Logo" class="w-[50px] h-[50px] rounded-full shadow-lg shadow-blue-950/40 object-cover">
+                <h1 class="text-xl md:text-2xl font-bold text-light">Daniel.dev</h1>
+            </div>
+            <!-- Botón de menú hamburguesa -->
+            <button id="menu-toggle" class="text-highlight md:hidden">
+                <!-- Ícono de tres líneas -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
-        <!-- Botón de menú hamburguesa -->
-        <button id="menu-toggle" class="text-highlight md:hidden">
-            <!-- Ícono de tres líneas -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+        <!-- menu para pantallas pequeñas-->
+        <nav id="mobile-menu" class="md:hidden hidden flex flex-col gap-4 bg-blue-800 text-light px-4 py-2 mt-2 rounded-lg w-full">
+            <a href="./index.html" class="hover:text-highlight">Inicio</a>
+            <a href="#habilidades" class="hover:text-highlight">Habilidades</a>
+            <a href="#mensaje" class="hover:text-highlight">Mensaje</a>
+            <a href="./curriculum daniel.pdf" download class="bg-highlight text-dark px-4 py-2 rounded-lg">Curriculum</a>
+          </nav>
+          <!-- menu para pantallas grandes-->
         <nav class="hidden md:flex gap-6 text-light items-center">
             <a href="./index.html" class="hover:text-highlight">Inicio</a>
             <a href="#habilidades" class="hover:text-highlight">Habilidades</a>
             <a href="#mensaje" class="hover:text-highlight">Mensaje</a>
             <!-- <a href="#contacto" class="hover:text-highlight">Contacto</a> -->
-            <a href="#cv" class="bg-highlight text-dark px-4 py-2 rounded-lg">Curriculum</a>
+            <a href="./curriculum daniel.pdf" download class="bg-highlight text-dark px-4 py-2 rounded-lg">Curriculum</a>
         </nav> 
     </header>  
     <section class="relative min-h-[50vh] bg-dark text-light">
@@ -90,5 +100,18 @@
             </form>
         </div>
     </section>
+    <footer class="text-center p-4 bg-[#A4FF7A] text-[#333]">
+        &copy; 2025 Daniel Tudela. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+      
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      </script>
+      
 </body>
 </html>
