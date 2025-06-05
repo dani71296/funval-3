@@ -1,0 +1,11 @@
+/*arrays*/
+let miArray= ["kevin", 322, true, 32.7];/*acepta sistintos tipos de valores ademas debe tener = y separado por comas*/
+console.log(miArray[1]);
+miArray.push("pablo"); /*añade al final de la lista*/
+miArray.unshift("felipe","thomas")/*añade al incio*/
+miArray.pop(); /*elimina el ultimo de la lista ademas puede guardar ese elemto*/
+miArray.shift();/*elimina el primer articulo de la lista*/
+/*iterar un array*/
+for(let index=0; index< miArray.length; index++){
+    console.log(miArray[index]);
+}
