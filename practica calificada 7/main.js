@@ -14,15 +14,18 @@ productos.forEach(producto => {
     console.log(`${producto.nombre}: $${producto.precio}`);
 });
 const productosDisponibles = productos.map(producto => producto.nombre);
-console.log(productosDisponibles);
-const productoBuscado = "Tablet"; 
+console.log(" Productos disponibles:", productosDisponibles);
+
+const productoBuscado = prompt("¿Qué producto estás buscando?");
 const disponible = productosDisponibles.includes(productoBuscado);
 
 if (disponible) {
-    console.log(`${productoBuscado} está disponible.`);
+    console.log(` ${productoBuscado} está disponible.`);
 } else {
-    console.log(`${productoBuscado} no está disponible.`);
+    console.log(` ${productoBuscado} no está disponible.`);
 }
+
+
 const productosConDescuento = productos.map(producto => ({
     nombre: producto.nombre,
     precio: (producto.precio * 0.9) // para el 10% de descuento
