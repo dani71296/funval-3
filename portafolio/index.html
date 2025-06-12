@@ -78,18 +78,7 @@
     </section>
     <section id="habilidades" class="bg-blue-100 pb-8">
         <h2 class="text-center mb-4 text-3xl font-bold">Habilidades</h2>
-        <div class="w-full grid grid-cols-2 md:grid-cols-5 gap-5 px-8 place-items-center">
-            <img src="./images/selogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/solidworklogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/Pythonlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/JavaScriptlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/inventorlogo.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/htmlog.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/excelogo.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/csslog.jpg" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/arduiniolog.png" alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-            <img src="./images/3dlogos2.jpg0 " alt="" class=" h-20 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-120">
-        </div>
+        <div id="contenedor-habilidades" class="w-full grid grid-cols-2 md:grid-cols-5 gap-5 px-8 place-items-center"></div>
     </section>
     <section id="mensaje" class="px-6 bg-cyan-50">
         <h2 class="text-center mb-6 text-2xl font-bold">Dejame un mensaje</h2>
@@ -113,6 +102,14 @@
         toggle.addEventListener('click', () => {
           menu.classList.toggle('hidden');
         });
-      </script>     
+    </script>  
+    <script src="./habilidades.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarHabilidades(); 
+        });
+    </script> 
+        
 </body>
 </html>
