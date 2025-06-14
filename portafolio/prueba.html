@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modal con fondo desenfocado</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+
+
+    <header class="bg-amber-800 flex items-column">
+    <h1>para hacer la prube de todo un pcopoco me arde el traser ayudaaaa</h1>
+</header>
+
+  <button id="abrir-modal" class="bg-blue-600 text-white px-4 py-2 rounded">Abrir Modal</button>
+
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-md flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 max-w-md text-black text-center relative">
+      <span id="cerrar-modal" class="absolute top-2 right-4 text-3xl cursor-pointer font-bold">&times;</span>
+      <h2 class="text-2xl mb-4">Modal</h2>
+      <p>Este es el contenido del modal con fondo desenfocado.</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const abrir = document.getElementById('abrir-modal');
+    const cerrar = document.getElementById('cerrar-modal');
+
+    abrir.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    cerrar.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>
