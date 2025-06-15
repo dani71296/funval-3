@@ -20,13 +20,39 @@ function mostrarHabilidades() {
       document.getElementById("modal-desc").textContent = habilidad.descripcion;
       document.getElementById("modal").classList.remove("hidden");
     });
-    //evento para cerrar
-    document.getElementById("cerrar-modal").addEventListener("click", () => {
-    document.getElementById("modal").classList.add("hidden");
-  });
-
     // Insertar imagen en contenedor y contenedor al DOM
     div.appendChild(img);
     contenedor.appendChild(div);
   });
+
+  //evento para cerrar
+    document.getElementById("cerrar-modal").addEventListener("click", () => {
+    document.getElementById("modal").classList.add("hidden");
+  });
 }
+// validacion de formulario
+let formulario = document.querySelector("#mensaje form");
+formulario.addEventListener("submit",function (e) {
+  e.preventDefault(); /* evita el envio del formulario antes de tiempo */
+  let nombre = formulario.nombre.value.trim();/* para obtener el nombre y le quita espacios extra */
+  let correo = formulario.correo.value.trim();
+  let mensaje = formulario.mensaje.value.trim();
+  /* para validar el correo */
+  let esCorreoValido = /\S+@\S+\.\S+/.test(correo);
+  /* verificar si algun campo esta vaio */
+  if (!nombre || !correo || !mensaje) {
+  alert("Por favor, completa todos los campos.");
+  return;
+  }
+  /* verificacion si el correro es invalido */
+  if (!esCorreoValido) {
+  alert("El correo electrónico no es válido.");
+  return;
+  }
+  /* si todo esta bien se agradece y se resetea el formulario */
+  else{
+    alert("¡Gracias por tu mensaje!");
+    formulario.reset();
+  }
+
+})
