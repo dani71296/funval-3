@@ -52,7 +52,8 @@ formulario.addEventListener("submit",function (e) {
   /* si todo esta bien se agradece y se resetea el formulario */
   else{
     alert("¡Gracias por tu mensaje!");
-    formulario.reset();
+    /* formulario.reset(); ya no resetear porque no llega nada */
+    formulario.submit(); 
   }
 
 })
