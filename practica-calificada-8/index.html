@@ -4,49 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-[#1a2b33] min-h-screen flex items-center justify-center p-4">
   <div class="grid grid-rows-5 grid-cols-3 gap-4 w-full max-w-2xl">
 
+    <!-- Logo -->
     <div class="col-span-1 row-span-1 flex items-center justify-center">
       <img src="logo.png" alt="Logo" class="h-12 w-12">
     </div>
 
+    <!-- Turno -->
     <div class="col-span-1 row-span-1 flex items-center justify-center">
-      <div class="bg-[#1a2b22] shadow-lg rounded-lg px-4 py-2 text-lg font-semibold">
+      <div id="turno" class="bg-[#1a2b22] shadow-lg rounded-lg px-4 py-2 text-lg font-semibold">
         Turno: <span class="text-blue-600">X</span>
       </div>
     </div>
 
+    <!-- Botón Reiniciar -->
     <div class="col-span-1 row-span-1 flex items-center justify-center">
-      <button class="bg-red-500 hover:bg-red-600 shadow-lg text-white px-4 py-2 rounded-lg">Reiniciar</button>
+      <button id="reiniciar" class="bg-red-500 hover:bg-red-600 shadow-lg text-white px-4 py-2 rounded-lg">Reiniciar</button>
     </div>
 
+    <!-- Tablero -->
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="0"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="1"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="2"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="3"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="4"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="5"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="6"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="7"></div>
+    <div class="aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold cursor-pointer" data-index="8"></div>
 
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-    <div class="row-span-1 col-span-1 aspect-square bg-blue-400 shadow-lg rounded-lg flex items-center justify-center text-3xl font-bold"> </div>
-
-
-    <div class="col-span-1 row-span-1 bg-blue-100 rounded-lg p-2 text-center font-semibold">
-      Ganadas X: 0
-    </div>
-    <div class="col-span-1 row-span-1 bg-yellow-100 rounded-lg p-2 text-center font-semibold">
-      Ganadas O: 0
-    </div>
-    <div class="col-span-1 row-span-1 bg-gray-200 rounded-lg p-2 text-center font-semibold">
-      Empates: 0
-    </div>
+    <!-- Marcadores -->
+    <div id="ganadas-x" class="col-span-1 bg-blue-100 rounded-lg p-2 text-center font-semibold">Ganadas X: 0</div>
+    <div id="ganadas-o" class="col-span-1 bg-yellow-100 rounded-lg p-2 text-center font-semibold">Ganadas O: 0</div>
+    <div id="empates" class="col-span-1 bg-gray-200 rounded-lg p-2 text-center font-semibold">Empates: 0</div>
 
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
